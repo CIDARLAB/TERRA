@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- CSS Style Sheet Link-->
+  <link rel="stylesheet" type="text/css" href="../CSS/docs.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  <!-- SocketIO link-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <meta charset="utf-8">
+  <title>Docs</title>
+</head>
+
+<body>
+  <!-- Site Navigation Bar -->
+  <nav class="navbar navbar-expand-sm fixed-top border">
+    <img src="../images/terra_logo2.png" style="width: 5%; height: 5%;" class="d-inline-block align-top text-white"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link active text-dark navbar-text" href="./index.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-dark navbar-text" href="./get_started.html">Setup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-dark navbar-text" href="./experiment.html">Experiment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-dark navbar-text" href="#">LiveView</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-dark navbar-text" href="#">Docs</a>
+        </li>
+      </ul>
+      <div class="navbar-nav push-right">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link" href="http://2018.igem.org/Team:BostonU_HW" target="_blank" style="width: 3.5rem;">
+                <img class="navbar-nav-svg" src="../Images/igem.png" style="width:100%; height:100%;"alt="Wiki">
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://0.0.0.0:3000" target="_blank" style="width: 3.5rem;">
+                <img class="navbar-nav-svg" src="../Images/Settings-icon.png" style="width:100%; height:100%;" alt="Calibrate">
+              </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <nav class="nav sidebar flex-column text-white navbar-fixed-left">
+          <br>
+          <h2 class="text-center" id="contents">Contents</h2>
+          <ul class="list-group">
+            <li class="nav-item active">
+              <a href="#get-started-sub" data-toggle="collapse" aria-expanded="false" class=" text-white dropdown-toggle nav-link">Get Started</a>
+              <ul class="collapse list-unstyled sub-menu border" id="get-started-sub">
+                <li>
+                  <a class="nav-link text-muted" href="#microfluidics">Microfluidics</a>
+                </li>
+                <li>
+                  <a class="nav-link text-muted" href="#active-xy-plane">Active XY Plane</a>
+                </li>
+                <li>
+                  <a class="nav-link text-muted" href="#automated-control-syringes">Control Syringes</a>
+                </li>
+                <li>
+                  <a class="nav-link text-muted" href="#user-interface">UI</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item active">
+              <a href="#hardware-assembly-sub" data-toggle="collapse" aria-expanded="false" class=" text-white dropdown-toggle nav-link">Hardware Assembly</a>
+              <ul class="collapse list-unstyled sub-menu border" id="hardware-assembly-sub">
+                <li>
+                  <a class="nav-link text-muted" href="#microfluidics">Active XY Plane</a>
+                </li>
+                <li>
+                  <a class="nav-link text-muted" href="#active-xy-plane">Control Syringe</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link text-white" href="#software-setup">Software Setup</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#experiment-setup">Experiment Setup</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#use-terra">Use TERRA</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#faqs">FAQs</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col main">
+        <h1 style="padding-top: 2%;" id="terra">TERRA</h1>
+        <hr>
+        <p>TERRA is an application &amp; microfluidic agnostic device that aims to bride the gap between microfluidics and benchtop biology. TERRA enables researchers to unload the outputs of microfluidic experiments onto standard vessels, such as microtiter
+          plates, in order to use equipment in the lab to run further analysis. Applications include, but no limited to, unloading onto standard well plates for analysis via plate readers and single droplet analysis via a flow cytometer. </p>
+        <h2 id="get-started">Get Started</h2>
+        <hr>
+        <p>TERRA is made up of 5 major components: </p>
+        <ol>
+          <li><a href="#microfluidics">Microfluidics</a> </li>
+          <li>Active XY Plane</li>
+          <li>Control Syringes</li>
+          <li>User Interface</li>
+        </ol>
+        <p>The sections below detail the pieces necessary to construct its respective components, which include design and CAD files, firmware, software dependencies, and third party order information. It is important to note that TERRA does not operate
+          microfluidic chips themselves, only the unloading of their products, so it is important to make sure that you have the necessary equipment to first run your microfluidic chip, such as pneumatic syringe pumps.</p>
+        <h3 id="microfluidics">Microfluidics</h3>
+        <h3>Active XY Plane</h3>
+        <h3>Control Syringe</h3>
+        <p>The Control Syringes are used to actuate valves on the TERRA Adapter, enabling the system to selectively dispense outputs onto the vessel. The Control Syringe system can be broken down to units, with each unit containing a servo motor, 12mL syringe,
+          3D printed piston, and mounting board. These units can then be combined together in a modular fashion depending on how many are required for your experiment. Every output from your microfluidic chip requires 2 Control Syringe units, one for
+          dispensing and the other for waste. For example, a 3 output microfluidic chip experiment requires 6 Control Syringe units. Its recommended to setup a multi-unit system when first setting up TERRA in order to eliminate to need to add further
+          Control Syringe units for future experiments.</p>
+        <h3>UI</h3>
+        <h2 id="assembly">Assembly</h2>
+        <hr>
+        <p>The Active XY Plane moves the vessel of interest in a two-dimensional space allowing for selective dispension of the microfluidic experiment products. Its low-cost design and simple assembly helps researchers setup TERRA in no time. Ensure you have the following pieces before assembly:</p>
+        <ul>
+          <li>Servo Motors</li>
+          <li></li>
+        </ul>
+        <h3>Active XY Plane Assembly</h3>
+        <ol>
+          <li>Cut the stainless steel rods to size (or have ordered the rods to exact sizes)</li>
+          <ol type="a">
+            <li>There should be one (1) rod cut to 203 mm, one (1) to 213 mm, and two (2) to 350 mm.</li>
+            <li>The two shorter rods will be used for vertical translation and the two larger for horizontal translation.</li>
+          </ol>
+          <br>
+          <li>Attach all bearings to the two vertical bars and the plate support.</li>
+          <ol type="a">
+            <li>Each of the vertical bars have two bearings and the plate support has four.</li>
+            <li>Make sure the bearings are attached to the side opposite of the etched teeth.</li>
+            <li>The bearings require M4 screws.</li>
+          </ol>
+          <br>
+          <li>Place the wood so that the longer sides are horizontal and shorter sides vertical.</li>
+          <br>
+          <li>Mount the support for pulley on the top left corner of the wood, making sure 8 mm hole on the side is facing towards you.</li>
+          <br>
+          <li>Put the 213 mm rod through the 8 mm hole.</li>
+          <br>
+          <li>Run the rod through the bearings attached to the vertical bar with teeth and attach the other end of the rod to the support for motor and pulley and mount the support.</li>
+          <ol type="a">
+            <li>The holes on the side of the vertical bar should be facing to the right, parallel to the long edge of the wooden board.</li>
+            <li>The bearings should be on top of the bar.</li>
+          </ol>
+          <br>
+          <li>Attach the two 350 mm rods to the holes on the side of the vertical bar.</li>
+          <br>
+          <li>Run the rods through the bearings attached to the plate support.</li>
+          <ol type="a">
+            <li>The bearings should be below the plate support and the etched teeth should be on top.</li>
+          </ol>
+          <br>
+          <li>Attach the other side of the two rods to the holes on the side of the vertical bar with motor. The bearings should be above the vertical bar.</li>
+          <br>
+          <li>Run the 213 mm rod through the bearings attached to the vertical bar (without teeth).</li>
+          <br>
+          <li>Attach the ends of rod to the two standard supports and mount the supports.</li>
+        </ol>
+        <h3>Control Syringe Assembly</h3>
+        <p>Before starting make sure you have the following pieces; links to the CAD files and order sheets can be found <a href="http://2018.igem.org/Team:BostonU_HW">here.</a></p>
+        <ol class="d-inline-block">
+          <li>Servo Motor</li>
+          <li>Servo Motor Mount</li>
+          <li>Piston Arm</li>
+          <li>Sryinge Connector</li>
+          <li>Syringe Holder</li>
+          <li>12mL Syringe</li>
+          <li>Base</li>
+          <li>Base Connector</li>
+          <li>Tubing</li>
+        </ol>
+        <div style="width:70%; margin-left: 3%; position: relative;"class="d-inline-block">
+          <img style="width: 100%;"src="../Images/Control Syringe/IMG_4253.JPG">
+          <div class="one">
+            <p>1</p>
+          </div>
+          <div class="two">
+            <p>2</p>
+          </div>
+          <div class="three">
+            <p>3</p>
+          </div>
+          <div class="four">
+            <p>4</p>
+          </div>
+          <div class="five">
+            <p>5</p>
+          </div>
+          <div class="six">
+            <p>6</p>
+          </div>
+          <div class="seven">
+            <p>7</p>
+          </div>
+          <div class="eight">
+            <p>8</p>
+          </div>
+          <div class="nine">
+            <p>9</p>
+          </div>
+        </div>
+        <ol>
+          <li>Slide servo motor (1) into the servo motor mount (2). Screw in place by using the hex nut. Ensure that servo motor is tightly secured.</li>
+          <img class="d-inline-block dual-pic first-pic" src="../Images/Control Syringe/IMG_4250.JPG" alt="">
+          <img class="d-inline-block dual-pic" src="../Images/Control Syringe/IMG_4251.JPG" alt="">
+          <li>Place piston arm (3) into syringe connector (4) on the side that has the hole for the screw. Put screw through syringe connector and piston arm and secure by screwing on hex nut. Piston arm should be able to rotate freely about the screw so do not tighten all the way.</li>
+          <img class="d-inline-block dual-pic first-pic" src="../Images/Control Syringe/IMG_4248.JPG" alt="">
+          <img class="d-inline-block dual-pic" src="../Images/Control Syringe/IMG_4247.JPG" alt="">
+          <li>Using screw that came with servo motor (1), attach piston arm (3) to the servo horn. Attach to the hole on the tip of the horn as shown below. When screwing in apply slight pressure due to inital lack of threading in the hole. Also make sure that the "U" shape in the syringe connector (4) is facing up.</li>
+          <img class="d-inline-block dual-pic first-pic" src="../Images/Control Syringe/IMG_4245.JPG" alt="">
+          <img class="d-inline-block dual-pic" src="../Images/Control Syringe/IMG_4244.JPG" alt="">
+          <li>Connect the Adafruit 16-channel PWM/Servo Shield to the Arduino following the instructions with the shield. Once connected connect the motor to the shield and upload the Reset program to set the servo motor position to origin. This step ensures that the following placement of the servo motor and syringe holder is correct.</li>
+          <ol type="a">
+            <li>Reseting to origin should place the servo motor horn vertically 90 degrees. If it is horizontal remove the horn and replace it at a 90 degree angle.</li>
+          </ol>
+          <li>Screw servo motor unit onto one of the bases (7) as shown below. Screw one end onto the second column of holes and the other on the third to last column on the other end. The row placement doesn't matter as long as both ends are on the same row.</li>
+          <img class="d-inline-block dual-pic first-pic" src="../Images/Control Syringe/IMG_9061.JPG" alt="">
+          <img class="d-inline-block dual-pic" src="../Images/Control Syringe/IMG_8841.JPG" alt="">
+          <li>Screw the syringe holder (5) onto the other base(7). The placement of the syringe holder should align with the piston arm (3) on the other base.</li>
+          <img class="d-inline-block dual-pic first-pic" src="../Images/Control Syringe/IMG_7942.JPG" alt="">
+          <img class="d-inline-block dual-pic" src="../Images/Control Syringe/IMG_5170.JPG" alt="">
+          <li>Connect the tubing (9) to the syringe (6) via a tube connector. Twist on the tube connector onto the syringe and push into tubing, ensuring that fit is tight.</li>
+          <img class="d-inline-block dual-pic first-pic" src="../Images/Control Syringe/IMG_9357.JPG" alt="">
+          <img class="d-inline-block dual-pic" src="../Images/Control Syringe/IMG_1537.JPG" alt="">
+          <li>Align the two halves of the control syringe unit so that the piston arm (3) is lined up with the syringe holder (5). Slide the assembled syringe into the syringe connector (4) by sliding the plunger of the syringe into the slot on the syringe connector. Swing over the now connected syringe over to slide the "wings" of the barrel into the syringe holder (5).</li>
+          <img class="d-inline-block dual-pic first-pic" src="../Images/Control Syringe/IMG_1597.JPG" alt="">
+          <img class="d-inline-block dual-pic" src="../Images/Control Syringe/IMG_3016.JPG" alt="">
+          <li>Connect the two bases using a base connector (8).</li>
+          <img class="d-inline-block dual-pic first-pic" src="../Images/Control Syringe/IMG_4237.JPG" alt="">
+          <img class="d-inline-block dual-pic" src="../Images/Control Syringe/IMG_4238.JPG" alt="">
+          <li>Connect the servo motor to the Adafruit 16-channel PWM/Servo Shield on the 0th pin.</li>
+          <p style="margin-top: 2%;">Congratulations! You've constructed a control syringe unit. These units can be connected in parallel depending on how many you need for your experiment. Just move base connectors so that they are connecting adjacent control syringe units at all connecting junctions. You can also use other pieces that have screw holes, such as syringe holders, to connect control syringe units. Connect additional units to the Arduino using the other servo pins on the shield. Below is an example of a 4 control syringe units connected together.</p>
+          <img style="margin-left: 20%; width: 50%; margin-top: 2%;" class="d-inline-block" src="../Images/Control Syringe/IMG_4236.JPG" alt="">
+        </ol>
+        <h2 id="software-setup">Software Setup</h2>
+        <hr>
+        <p>Once you have assembled the hardware components and circuitry for TERRA, the next step is to upload the necessary files onto the Arduino. There are two main files that are required; the libraries and main script. Download the lib folder found in the in TERRA's GitHub repository. After downloading, transfer these files into the Libraries folder found in your Arduino directory. Lastly, download the main.ino file found src folder in TERRA's GitHub repository. Upload the main.ino file via the Arduino IDE. If the Arduino is reuploaded with other code then you must reupload the Arduino with the main.ino file.</p>
+        <hr>
+        <p></p>
+        <h2 id="experiment-setup">Microfluidic Setup</h2>
+        <hr>
+        <p>To use unload the outputs from you microfluidic chip, a TERRA Adapter is required. The number of inputs for TERRA Adapter must equal the number of outputs of your microfluidic chip. For this reason if you do not already have a TERRA Adapter that already fills this constraint you are required to make one. Using <a href="3duf.org">3DuF</a>, a web-based application for designing and creating microfluidic devices using <a href="http://cidarlab.org/microfluidics/">Makerfluidics</a>, create a TERRA Adapter chip for your run using the TERRA Adapter feature. A TERRA Adapter feature is needed for every output coming off your microfluidic chip. Visit the <a href="http://2017.igem.org/Team:BostonU_HW/IntrouF">2017 BostonU HW Mars</a> team's wiki for more information regarding the construction of microfluidic chips using Makerfluidics.</p>
+        <h2 id="use-terra">Use TERRA</h2>
+        <hr>
+        <h2 id="faqs">FAQs</h2>
+        <hr>
+        <h2 id="contact">Contact</h2>
+        <p>For help contact the team at <a href="mailto:buigem.hw.18@gmail.com">buigem.hw.18@gmail.com</a></p>
+        <hr>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+
+</html>

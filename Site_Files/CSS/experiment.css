@@ -1,0 +1,45 @@
+html{
+  height: 100%;
+}
+
+.cc-btn{
+  background-color: #06334a;
+}
+
+button {
+  border-radius: 0 !important;
+}
+
+.navbar-text{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  letter-spacing: .1rem;
+  font-size: 0.9rem;
+}
+
+body {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif!important;
+  padding-top: 6%;
+  height: 100%;
+  background-color: WhiteSmoke!important;
+}
+
+.container-fluid{
+  background-color: WhiteSmoke;
+  height: 100%;
+}
+
+.full{
+  height: 100%;
+}
+
+.push-right{
+  margin-left: 57%;
+}
+.navbar {
+   background-color: WhiteSmoke;
+}
+
+.grid-button{
+  background-color: #06334a;
+  width: 100%;
+}

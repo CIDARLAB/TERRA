@@ -1,0 +1,56 @@
+html, body {
+  height: 100%;
+}
+
+body{
+  padding-top: 6%;
+}
+
+.full-screen{
+  height: 100%;
+}
+
+.text-block {
+    position: absolute;
+    top: 40%;
+    bottom: 50%;
+    left: 10%;
+    right: 10%;
+    color: white;
+}
+
+.home-btn {
+  position: relative;
+  top: 60%;
+  margin-top: 1%;
+  margin-left: 0.25%;
+  margin-right: 0.25%;
+  left: 29%;
+  font-size: 1rem!important;
+}
+
+.cc-btn{
+  background-color: #06334a;
+}
+
+a {
+  border-radius: 0!important;
+}
+
+.home-text{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  letter-spacing: .2rem;
+}
+
+.navbar-text{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  letter-spacing: .1rem;
+  font-size: 0.9rem;
+}
+
+.push-right{
+  margin-left: 55%;
+}
+.navbar {
+   background-color: WhiteSmoke;
+}

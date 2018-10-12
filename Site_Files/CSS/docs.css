@@ -1,0 +1,122 @@
+body {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif!important;
+  padding-top: 6%;
+  height: 100%;
+  background-color: WhiteSmoke!important;
+}
+
+html{
+  height: 100%;
+}
+
+.full-screen{
+  height: 100%;
+}
+
+.navbar-text{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  letter-spacing: .1rem;
+  font-size: 0.9rem;
+}
+
+.push-right{
+  margin-left: 55%;
+}
+
+.navbar{
+  background-color: WhiteSmoke;
+}
+
+.container-fluid{
+  padding-left: 0%!important;
+}
+.sidebar{
+  background-color: #00af66;
+  position: fixed;
+  height: 100%;
+}
+
+.sub-menu{
+  padding-left: 5%!important;
+  background-color: WhiteSmoke;
+}
+
+.main{
+}
+
+li{
+  margin-top: 2%;
+}
+
+.one{
+  position: absolute!important;
+  left: 15%;
+  top: 20%;
+  font-size: 2rem;
+}
+
+.two{
+  position: absolute!important;
+  left: 5%;
+  top: 35%;
+  font-size: 2rem;
+}
+
+.three{
+  position: absolute!important;
+  left: 5%;
+  top: 70%;
+  font-size: 2rem;
+}
+
+.four{
+  position: absolute!important;
+  left: 10%;
+  top: 55%;
+  font-size: 2rem;
+}
+
+.five{
+  position: absolute!important;
+  left: 40%;
+  top: 25%;
+  font-size: 2rem;
+}
+
+.six{
+  position: absolute!important;
+  left: 40%;
+  top: 50%;
+  font-size: 2rem;
+}
+
+.seven{
+  position: absolute!important;
+  left: 75%;
+  top: 83%;
+  font-size: 2rem;
+}
+
+.eight{
+  position: absolute!important;
+  left: 70%;
+  top: 30%;
+  font-size: 2rem;
+}
+
+.nine{
+  position: absolute!important;
+  left: 30%;
+  top: 85%;
+  font-size: 2rem;
+}
+
+.dual-pic{
+  width: 40%;
+  margin-top: 2%;
+}
+
+.first-pic{
+  margin-left: 7%;
+  margin-right: 5%;
+}

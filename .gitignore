@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+# Apple Junk
+.DS_Store
+
+# Repo Specific
+main.js
+*.psd

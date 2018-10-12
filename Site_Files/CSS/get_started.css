@@ -1,0 +1,47 @@
+html{
+  height: 100%;
+}
+
+.navbar-text{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  letter-spacing: .1rem;
+  font-size: 0.9rem;
+}
+
+body {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif!important;
+  padding-top: 6%;
+  height: 100%;
+}
+
+.carousel-item{
+  background-color: WhiteSmoke;
+}
+
+.push-right{
+  margin-left: 55%;
+}
+
+.p-block{
+  width: 70%;
+}
+
+.step{
+  position: absolute;
+  top: 3%;
+  left: 2%;
+}
+
+.navbar {
+   background-color: WhiteSmoke;
+}
+
+.chip{
+  background-color: white;
+  width: 30%;
+}
+
+.DuF-logo{
+  width: 30%;
+  margin-left: 8%;
+}
