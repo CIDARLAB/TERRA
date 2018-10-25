@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <!-- CSS Style Sheet Link-->
-  <link rel="stylesheet" type="text/css" href="../CSS/experiment.css">
+  <link rel="stylesheet" type="text/css" href="./Site_Files/CSS/experiment.css">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,7 +19,7 @@
 <body>
   <!--Site navigation bar -->
   <nav class="navbar navbar-expand-sm fixed-top border">
-    <img src="../images/terra_logo2.png" style="width: 5%; height: 5%;" class="d-inline-block align-top text-white"></a>
+    <img src="./Site_Files/Images/terra_logo2.png" style="width: 5%; height: 5%;" class="d-inline-block align-top text-white"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,12 +45,12 @@
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="http://2018.igem.org/Team:BostonU_HW" target="_blank" style="width: 3.5rem;">
-              <img class="navbar-nav-svg" src="../Images/igem.png" style="width:100%; height:100%;"alt="Wiki">
+              <img class="navbar-nav-svg" src="./Site_Files/Images/igem.png" style="width:100%; height:100%;"alt="Wiki">
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://0.0.0.0:3000" target="_blank" style="width: 3.5rem;">
-              <img class="navbar-nav-svg" src="../Images/Settings-icon.png" style="width:100%; height:100%;" alt="Calibrate">
+              <img class="navbar-nav-svg" src="./Site_Files/Images/Settings-icon.png" style="width:100%; height:100%;" alt="Calibrate">
             </a>
           </li>
         </ul>
@@ -69,19 +69,19 @@
           <p class="text-muted text-center">Enter protocol information</p>
           <div class="form-group row">
             <div class="col text-center">
-              <button class="btn btn-warning" type="button" name="action" id="resetButton">New Connection</button>
+              <button class="btn btn-warning" type="button" name="action" id="resetButton">Reset TERRA</button>
             </div>
           </div>
           <hr>
           <div class="form-group row">
-            <label for="outputNumber" class="col-8 col-form-label">Number of Outputs</label>
+            <label for="outputNumber" class="col-9 col-form-label">Number of Outputs</label>
             <div class="col">
               <input type="number" class="form-control" id="outputNumber" placeholder="0" name="outputNumber">
             </div>
           </div>
           <br>
           <div class="form-group row">
-            <label for="selectVessel" class="col-8 col-from-label">Select Vessel</label>
+            <label for="selectVessel" class="col-9 col-from-label">Select Vessel</label>
             <div class="col">
               <select class="custom-select" name="selectVessel" id="selectVessel">
                   <option value="24">24-well plate</option>
@@ -90,28 +90,47 @@
                 </select>
             </div>
           </div>
+          <!--
           <div class="form-group row">
-            <label for="inputFlow" class="col-8 col-form-label">Total Flow Rate (mL/hr)</label>
+            <label for="selectType" class="col-9 col-from-label">Type of Microfluidic Chip</label>
+            <div class="col">
+              <select class="custom-select" name="selectType" id="selectType">
+                  <option value="c">Continous Flow</option>
+                  <option value="d">Droplet</option>
+                </select>
+            </div>
+          </div>
+        -->
+          <div class="form-group row">
+            <label for="inputFlow" class="col-9 col-form-label">Total Flow Rate in TERRA Adapter (mL/hr)</label>
             <div class="col">
               <input type="number" class="form-control" id="inputFlow" placeholder="0">
             </div>
           </div>
           <div class="form-group row">
-            <label for="inputVolume" class="col-8 col-form-label">Enter Volume (mL)</label>
+            <label for="inputVolume" class="col-9 col-form-label">Enter Sample Volume (mL)</label>
             <div class="col">
               <input type="number" step="any" class="form-control" id="inputVolume" placeholder="0" name="inputVolume">
             </div>
           </div>
           <div class="form-group row">
-            <label for="inputDensity" class="col-8 col-form-label">Density (kg/m^3)</label>
+            <label for="inputDensity" class="col-9 col-form-label">Sample Density (kg/m^3)</label>
             <div class="col">
-              <input type="number" class="form-control" id="inputDensity" placeholder="0" name="inputDensity">
+              <input type="number" class="form-control" id="inputDensity" placeholder="1000" name="inputDensity">
             </div>
           </div>
           <div class="form-group row">
-            <div class="col">
-              <button onclick="getOutputs()" class="btn cc-btn text-white" type="button" name="action" id="inputButton" value="inputButton">Submit</button>
+            <div class="col d-inline">
+              <button onclick="getOutputs()" class="btn cc-btn text-white" type="button" name="action" id="inputButton" placeholder="1000" value="inputButton">Initialize TERRA</button>
             </div>
+            <!--
+            <div class="col d-inline">
+              <button onclick="sendValue()" style="margin-left:100%;" class="btn cc-btn text-white" type="button" name="action" id="contButton" value="c">C</button>
+            </div>
+            <div class="col d-inline">
+              <button onclick="sendValue()" style="margin-left:60%;" class="btn cc-btn text-white" type="button" name="action" id="dropButton" value="d">D</button>
+            </div>
+          -->
           </div>
         </form>
       </div>
@@ -130,7 +149,7 @@
         <br>
         <div class="form-group row">
           <div class="col">
-            <button class="btn btn-success text-white" type="button" name="action" id="startButton">Start Run</button>
+            <button class="btn btn-success text-white" type="button" name="action" id="startButton" style="visibility: hidden;">Start TERRA</button>
           </div>
         </div>
       </div>
@@ -142,7 +161,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  <script src="../../main.js"></script>
+  <script src="./main.js"></script>
   <script>
     const socket = io('http://localhost:3000');
     console.log("Sending Hello World ");
@@ -197,7 +216,9 @@
       console.log(xy[1]);
     };
 
+    let start_counter = 0;
     function submitXY(button){
+      start_counter++;
       function str2ab_newline(str) {
         str = str + '\n';
         var buf = new ArrayBuffer(str.length); // 2 bytes for each char
@@ -208,8 +229,11 @@
         return buf;
       };
       let submitOutput = parseInt(button.name,10);
+      if ((start_counter) == outputNumber) {
+        document.getElementById('startButton').style.visibility = 'visible';
+      };
       socket.emit("send-raw", {
-        "name": '/dev/cu.usbmodem1411',
+        "name": '/dev/cu.usbmodem14101',
         "payload": str2ab_newline(xy[submitOutput])
       });
     };
